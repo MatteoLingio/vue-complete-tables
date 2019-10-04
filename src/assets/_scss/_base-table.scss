@@ -1,0 +1,105 @@
+@import '../../assets/_scss/_variables.scss';
+
+.table-container{
+    overflow-x: auto;
+}
+table {
+    position: relative;
+    // table-layout: fixed;
+    border: 0.5px solid #ddd;
+    font-size: inherit;
+    // border-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-top: 0px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+    z-index: 0;
+     /* Scrollbar are always visible */
+    box-sizing : border-box;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 5px
+}
+
+td {
+    min-width: 10%;
+    width: 20%;
+    max-width: 20%;
+}
+
+tr.border_bottom td {
+    padding-bottom: 10px;
+    border-bottom: 1pt solid #ddd;
+}
+
+
+tbody {
+    padding: 10px;
+}
+
+.input-search {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input {
+    border-style: none;
+    background: transparent;
+    outline: none;
+}
+
+.webflow-style-input {
+height: 5px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  border-radius: 0px;
+  border-bottom: 4px solid $light-theme-main-color;
+  padding: 0rem 1.5rem 1.8rem 1.4rem;
+  border-bottom
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 999;
+    height: 10px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    background-position: 0% 0%;
+    background-size: 500% auto;
+  }
+}
+
+.webflow-style-input input {
+  height: 30px;
+  flex-grow: 1;
+  color: $input-text-active;
+  font-size: 1rem;
+  line-height: 2.8rem;
+  vertical-align: middle;
+  &::-webkit-input-placeholder {
+    color: $input-text-inactive;
+  }
+}
+
+.webflow-style-input button {
+  color:  $input-text-inactive;
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  vertical-align: middle;
+  transition: color .25s;
+  &:hover {
+    color: $input-text-active;
+  }
+}
